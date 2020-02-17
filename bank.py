@@ -1,15 +1,23 @@
 a=0
 w=0
+d=0
 def deposit(amt):
     print('deposited')
     global d
-    d=amt+a
-    print('now your balance is:',d)
+    if (w==0):
+        d=amt+a
+        print(d)
+    elif (w!=0):
+        
+        d=amt+w
+        print(d)
+    
     
 def withdraw(amt):
     print('withdrawed')
+    global w
     w=d-amt
-    print('now your balance is:',w)
+    print(w)
     
 def main():
     print(' To Deposit enter 1')
